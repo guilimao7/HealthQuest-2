@@ -7,18 +7,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cadastro - HealthQuest</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="assets/logo.png" alt="" />
-        <h1>HealthQuest</h1>
-        <form id="Form">
-            <input type="nome" id="name" placeholder="Nome" required />
-            <input type="email" id="email" placeholder="E-mail" required />
-            <input type="password" id="password" placeholder="Senha" required />
-            <button type="submit">Cadastrar</button>
-        </form>
+    <div class="login-outer">
+        <div class="login-container">
+            <img src="assets/logo.png" alt="Logo HealthQuest" />
+            <h1>HealthQuest</h1>
+            <h2 class="login-subtitle">Inicie aqui sua nova jornada para uma vida mais saudável</h2>
+            <form id="Form">
+                <input type="text" id="name" placeholder="Nome" required />
+                <input type="email" id="email" placeholder="E-mail" required />
+                <input type="password" id="password" placeholder="Senha" required />
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
     </div>
 
     <script src="cadastro.js"></script>

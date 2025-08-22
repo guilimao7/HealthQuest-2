@@ -1,0 +1,115 @@
+body {
+    font-family: "Alumni Sans SC", sans-serif;
+    background: linear-gradient(135deg, #232323 0%, #851010 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-outer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.login-container {
+    background: rgba(30, 30, 30, 0.97);
+    padding: 36px 44px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.login-container h1 {
+    font-size: 54px;
+    color: #fff;
+    margin: 0 0 6px 0;
+    letter-spacing: 1px;
+}
+
+.login-subtitle {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.login-container input {
+    width: 93%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #232323;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 1px 4px rgba(133,16,16,0.08);
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.login-container input:focus {
+    box-shadow: 0 0 0 2px #d7263d;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #d7263d 0%, #851010 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    box-shadow: 0 2px 12px rgba(215,38,61,0.10);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-container button:hover {
+    background: linear-gradient(90deg, #851010 0%, #d7263d 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.login-container p {
+    margin-top: 18px;
+    color: #e0e0e0;
+}
+
+.login-container a {
+    color: #d7263d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 18px 6px;
+        border-radius: 10px;
+    }
+    .login-container h1 {
+        font-size: 36px;
+    }
+    .login-subtitle {
+        font-size: 16px;
+    }
+}
