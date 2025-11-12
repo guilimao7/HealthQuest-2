@@ -27,21 +27,47 @@
     <div class="container">
       <div class="posts-header">
         <h2>Receitas e Dicas</h2>
-        <button class="btn-new-post" aria-label="Nova postagem">+</button>
+        <button id="btnOpenNewPost" class="btn-new-post" aria-label="Nova postagem">+</button>
       </div>
 
-        <article class="post-card">
-          <div class="post-content">
-            <h3 class="post-title">Salada fodase</h3>
-            <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="post-meta">Por Usuário • 1 semana</div>
-          </div>
-        </article>
-
-
+      <!-- posts grid (onde JS vai inserir as receitas) -->
+      <section class="posts-grid" id="postsGrid">
+        <!-- ...existing code (exemplos estáticos removidos; JS preenche aqui) ... -->
       </section>
     </div>
   </main>
 
+  <!-- modal / formulário de nova receita -->
+  <div id="newPostModal" class="modal-hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <form id="newPostForm" class="new-post-form" novalidate>
+      <button type="button" class="close-modal" id="closeModal" aria-label="Fechar">✕</button>
+      <h3>Nova Receita</h3>
+
+      <label>
+        Título
+        <input type="text" name="title" id="postTitle" required maxlength="100" />
+      </label>
+
+      <label>
+        Imagem URL (opcional)
+        <input type="url" name="image" id="postImage" placeholder="https://..." />
+      </label>
+
+      <label>
+        Descrição / Receita
+        <textarea name="excerpt" id="postExcerpt" rows="6" required maxlength="1000"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Publicar</button>
+        <button type="button" class="btn-cancel" id="cancelBtn">Cancelar</button>
+      </div>
+
+      <div id="formMessage" class="form-message" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <script src="receitas.js"></script>
 </body>
 </html>
