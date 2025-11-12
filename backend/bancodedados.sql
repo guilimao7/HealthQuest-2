@@ -7,3 +7,12 @@ create table users(
     email varchar(255),
     password varchar(255)
 );
+
+create table recipes(
+    id int auto_increment primary key,
+    user_id int,
+    title varchar(255),
+    ingredients text,
+    instructions text,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
